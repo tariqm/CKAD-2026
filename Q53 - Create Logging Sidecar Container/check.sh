@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q59 CHECKS
+# Q53 CHECKS
 # ============================================================================
 score=0
 total=4
 
-print_header "Q59 - Create Logging Sidecar Container"
+print_header "Q53 - Create Logging Sidecar Container"
 
 # Check 1: pod exists
 EXISTS=$(resource_exists "pod/app-with-sidecar-logging" "q53")

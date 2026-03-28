@@ -41,12 +41,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q81 - Create ClusterIP Service
+# Q70 - Create ClusterIP Service
 # ============================================================================
 score=0
 total=4
 
-print_header "Q81 - Create ClusterIP Service"
+print_header "Q70 - Create ClusterIP Service"
 
 # Check 1: Service exists
 EXISTS=$(resource_exists "svc/web-svc" "q70")

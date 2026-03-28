@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q78 - Use Downward API Environment Variables
+# Q67 - Use Downward API Environment Variables
 # ============================================================================
 score=0
 total=4
 
-print_header "Q78 - Use Downward API Environment Variables"
+print_header "Q67 - Use Downward API Environment Variables"
 
 # Check 1: Pod exists
 EXISTS=$(resource_exists "pod/downward-env-pod" "q67")

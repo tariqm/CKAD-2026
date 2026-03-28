@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q68 CHECKS
+# Q57 CHECKS
 # ============================================================================
 score=0
 total=3
 
-print_header "Q68 - Set SecurityContext RunAsNonRoot"
+print_header "Q57 - Set SecurityContext RunAsNonRoot"
 
 # Check 1: Pod exists
 pod_exists=$(resource_exists "pod/nonroot-pod" "q57")

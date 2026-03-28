@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q56 CHECKS
+# Q50 CHECKS
 # ============================================================================
 score=0
 total=4
 
-print_header "Q56 - Create Pod with All Three Probes"
+print_header "Q50 - Create Pod with All Three Probes"
 
 # Check 1: pod exists
 EXISTS=$(resource_exists "pod/triple-probe-pod" "q50")

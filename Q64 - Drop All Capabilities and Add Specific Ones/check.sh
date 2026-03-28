@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q75 CHECKS
+# Q64 Drop All Capabilities and Add Specific Ones
 # ============================================================================
 score=0
 total=3
 
-print_header "Q75 - Drop All Capabilities and Add Specific Ones"
+print_header "Q64 - Drop All Capabilities and Add Specific Ones"
 
 # Check 1: Pod exists
 POD_EXISTS=$(resource_exists "pod/secure-pod" "q64")

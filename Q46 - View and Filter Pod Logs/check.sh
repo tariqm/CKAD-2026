@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q50 CHECKS
+# Q46 CHECKS
 # ============================================================================
 score=0
 total=2
 
-print_header "Q50 - View and Filter Pod Logs"
+print_header "Q46 - View and Filter Pod Logs"
 
 # Check 1: File exists
 file_ok="false"

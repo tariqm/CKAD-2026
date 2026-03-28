@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q45 CHECKS
+# Q41 CHECKS
 # ============================================================================
 score=0
 total=3
 
-print_header "Q45 - Create Deployment with Env Vars from ConfigMap"
+print_header "Q41 - Create Deployment with Env Vars from ConfigMap"
 
 # Check 1: Deployment exists
 exists=$(resource_exists "deployment/env-app" "q41")

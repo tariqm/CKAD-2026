@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q47 CHECKS
+# Q43 CHECKS
 # ============================================================================
 score=0
 total=4
 
-print_header "Q47 - Add Liveness Probe with Exec Command"
+print_header "Q43 - Add Liveness Probe with Exec Command"
 
 # Check 1: Pod exists
 exists=$(resource_exists "pod/liveness-exec-pod" "q43")

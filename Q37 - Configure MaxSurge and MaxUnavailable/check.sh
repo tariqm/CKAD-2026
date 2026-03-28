@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q41 CHECKS
+# Q37 CHECKS
 # ============================================================================
 score=0
 total=4
 
-print_header "Q41 - Configure MaxSurge and MaxUnavailable"
+print_header "Q37 - Configure MaxSurge and MaxUnavailable"
 
 # Check 1: Deployment exists
 exists=$(resource_exists "deployment/strategy-app" "q37")

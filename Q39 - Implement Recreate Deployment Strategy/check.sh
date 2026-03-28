@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q43 CHECKS
+# Q39 CHECKS
 # ============================================================================
 score=0
 total=3
 
-print_header "Q43 - Implement Recreate Deployment Strategy"
+print_header "Q39 - Implement Recreate Deployment Strategy"
 
 # Check 1: Deployment exists
 exists=$(resource_exists "deployment/recreate-app" "q39")

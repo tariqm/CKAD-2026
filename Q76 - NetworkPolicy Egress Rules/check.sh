@@ -41,12 +41,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q87 - NetworkPolicy Egress Rules
+# Q76 - NetworkPolicy Egress Rules
 # ============================================================================
 score=0
 total=5
 
-print_header "Q87 - NetworkPolicy Egress Rules"
+print_header "Q76 - NetworkPolicy Egress Rules"
 
 # Check 1: NetworkPolicy exists
 EXISTS=$(resource_exists "networkpolicy/restrict-egress" "q76")

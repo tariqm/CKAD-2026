@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q67 CHECKS
+# Q56 CHECKS
 # ============================================================================
 score=0
 total=3
 
-print_header "Q67 - Create ClusterRole and ClusterRoleBinding"
+print_header "Q56 - Create ClusterRole and ClusterRoleBinding"
 
 # Check 1: ClusterRole exists (cluster-scoped, no namespace)
 cr_exists=$(kubectl get clusterrole node-viewer >/dev/null 2>&1 && echo true || echo false)

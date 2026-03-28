@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q76 CHECKS
+# Q65 Create ServiceAccount Token
 # ============================================================================
 score=0
 total=3
 
-print_header "Q76 - Create ServiceAccount Token"
+print_header "Q65 - Create ServiceAccount Token"
 
 # Check 1: ServiceAccount exists
 SA_EXISTS=$(resource_exists "serviceaccount/api-service-account" "q65")

@@ -41,12 +41,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q82 - Expose Deployment via kubectl expose
+# Q71 - Expose Deployment via kubectl expose
 # ============================================================================
 score=0
 total=4
 
-print_header "Q82 - Expose Deployment via kubectl expose"
+print_header "Q71 - Expose Deployment via kubectl expose"
 
 # Check 1: Service exists
 EXISTS=$(resource_exists "svc/api-svc" "q71")

@@ -44,9 +44,9 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q89 - Create Ingress with TLS
+# Q78 - Create Ingress with TLS
 # ============================================================================
-print_header "Q89 - Create Ingress with TLS"
+print_header "Q78 - Create Ingress with TLS"
 
 score=0
 total=4

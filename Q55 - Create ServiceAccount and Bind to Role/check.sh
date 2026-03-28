@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q66 CHECKS
+# Q55 CHECKS
 # ============================================================================
 score=0
 total=3
 
-print_header "Q66 - Create ServiceAccount and Bind to Role"
+print_header "Q55 - Create ServiceAccount and Bind to Role"
 
 # Check 1: ServiceAccount exists
 sa_exists=$(resource_exists "serviceaccount/app-sa" "q55")

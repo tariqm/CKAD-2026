@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q49 CHECKS
+# Q45 CHECKS
 # ============================================================================
 score=0
 total=2
 
-print_header "Q49 - Debug CrashLoopBackOff Pod"
+print_header "Q45 - Debug CrashLoopBackOff Pod"
 
 # Check 1: Pod exists
 exists=$(resource_exists "pod/crashing-pod" "q45")

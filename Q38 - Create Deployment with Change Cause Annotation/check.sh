@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q42 CHECKS
+# Q38 CHECKS
 # ============================================================================
 score=0
 total=3
 
-print_header "Q42 - Create Deployment with Change Cause Annotation"
+print_header "Q38 - Create Deployment with Change Cause Annotation"
 
 # Check 1: Deployment exists
 exists=$(resource_exists "deployment/tracked-app" "q38")

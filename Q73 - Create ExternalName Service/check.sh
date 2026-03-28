@@ -41,12 +41,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q84 - Create ExternalName Service
+# Q73 - Create ExternalName Service
 # ============================================================================
 score=0
 total=3
 
-print_header "Q84 - Create ExternalName Service"
+print_header "Q73 - Create ExternalName Service"
 
 # Check 1: Service exists
 EXISTS=$(resource_exists "svc/external-db" "q73")

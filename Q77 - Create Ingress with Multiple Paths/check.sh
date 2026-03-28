@@ -41,12 +41,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q88 - Create Ingress with Multiple Paths
+# Q77 - Create Ingress with Multiple Paths
 # ============================================================================
 score=0
 total=5
 
-print_header "Q88 - Create Ingress with Multiple Paths"
+print_header "Q77 - Create Ingress with Multiple Paths"
 
 # Check 1: Ingress exists
 EXISTS=$(resource_exists "ingress/multi-path-ingress" "q77")

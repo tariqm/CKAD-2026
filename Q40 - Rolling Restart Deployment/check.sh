@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q44 CHECKS
+# Q40 CHECKS
 # ============================================================================
 score=0
 total=2
 
-print_header "Q44 - Rolling Restart Deployment"
+print_header "Q40 - Rolling Restart Deployment"
 
 # Check 1: Deployment exists
 exists=$(resource_exists "deployment/restart-app" "q40")

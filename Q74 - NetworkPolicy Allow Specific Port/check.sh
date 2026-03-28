@@ -41,12 +41,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q85 - NetworkPolicy Allow Specific Port
+# Q74 - NetworkPolicy Allow Specific Port
 # ============================================================================
 score=0
 total=4
 
-print_header "Q85 - NetworkPolicy Allow Specific Port"
+print_header "Q74 - NetworkPolicy Allow Specific Port"
 
 # Check 1: NetworkPolicy exists
 EXISTS=$(resource_exists "networkpolicy/allow-port-80" "q74")

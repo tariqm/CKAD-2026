@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q69 CHECKS
+# Q58 CHECKS
 # ============================================================================
 score=0
 total=4
 
-print_header "Q69 - Set SecurityContext ReadOnlyRootFilesystem"
+print_header "Q58 - Set SecurityContext ReadOnlyRootFilesystem"
 
 # Check 1: Pod exists
 pod_exists=$(resource_exists "pod/readonly-pod" "q58")

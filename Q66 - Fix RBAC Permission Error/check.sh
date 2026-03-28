@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q77 - Fix RBAC Permission Error
+# Q66 - Fix RBAC Permission Error
 # ============================================================================
 score=0
 total=3
 
-print_header "Q77 - Fix RBAC Permission Error"
+print_header "Q66 - Fix RBAC Permission Error"
 
 # Check 1: Role exists
 EXISTS=$(resource_exists "role/deploy-role" "q66")

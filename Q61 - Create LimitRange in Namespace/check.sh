@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q72 CHECKS
+# Q61 CHECKS
 # ============================================================================
 score=0
 total=5
 
-print_header "Q72 - Create LimitRange in Namespace"
+print_header "Q61 - Create LimitRange in Namespace"
 
 # Check 1: LimitRange exists
 LR_EXISTS=$(resource_exists "limitrange/default-limits" "q61")

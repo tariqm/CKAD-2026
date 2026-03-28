@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q48 CHECKS
+# Q44 CHECKS
 # ============================================================================
 score=0
 total=4
 
-print_header "Q48 - Add Startup Probe to Slow Starting Pod"
+print_header "Q44 - Add Startup Probe to Slow Starting Pod"
 
 # Check 1: Pod exists
 exists=$(resource_exists "pod/slow-start-pod" "q44")

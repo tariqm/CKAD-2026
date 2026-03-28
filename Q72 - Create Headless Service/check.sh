@@ -41,12 +41,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q83 - Create Headless Service
+# Q72 - Create Headless Service
 # ============================================================================
 score=0
 total=4
 
-print_header "Q83 - Create Headless Service"
+print_header "Q72 - Create Headless Service"
 
 # Check 1: Service exists
 EXISTS=$(resource_exists "svc/db-headless" "q72")

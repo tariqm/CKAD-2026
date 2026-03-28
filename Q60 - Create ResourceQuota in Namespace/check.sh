@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q71 CHECKS
+# Q60 CHECKS
 # ============================================================================
 score=0
 total=5
 
-print_header "Q71 - Create ResourceQuota in Namespace"
+print_header "Q60 - Create ResourceQuota in Namespace"
 
 # Check 1: ResourceQuota exists
 RQ_EXISTS=$(resource_exists "resourcequota/compute-quota" "q60")

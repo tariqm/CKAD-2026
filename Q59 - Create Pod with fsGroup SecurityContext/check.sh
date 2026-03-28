@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q70 CHECKS
+# Q59 CHECKS
 # ============================================================================
 score=0
 total=3
 
-print_header "Q70 - Create Pod with fsGroup SecurityContext"
+print_header "Q59 - Create Pod with fsGroup SecurityContext"
 
 # Check 1: Pod exists
 pod_exists=$(resource_exists "pod/fsgroup-pod" "q59")

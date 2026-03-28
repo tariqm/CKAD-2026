@@ -41,12 +41,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q86 - NetworkPolicy Allow from Namespace
+# Q75 - NetworkPolicy Allow from Namespace
 # ============================================================================
 score=0
 total=4
 
-print_header "Q86 - NetworkPolicy Allow from Namespace"
+print_header "Q75 - NetworkPolicy Allow from Namespace"
 
 # Check 1: NetworkPolicy exists
 EXISTS=$(resource_exists "networkpolicy/allow-from-frontend" "q75")

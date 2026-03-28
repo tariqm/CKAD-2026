@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q53 CHECKS
+# Q47 CHECKS
 # ============================================================================
 score=0
 total=3
 
-print_header "Q53 - Debug Pending Pod Due to Resource Constraints"
+print_header "Q47 - Debug Pending Pod Due to Resource Constraints"
 
 # Check 1: fixed-pod exists in q47
 EXISTS=$(resource_exists "pod/fixed-pod" "q47")

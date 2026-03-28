@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q73 CHECKS
+# Q62 CHECKS
 # ============================================================================
 score=0
 total=5
 
-print_header "Q73 - Use Projected Volume with Secret and ConfigMap"
+print_header "Q62 - Use Projected Volume with Secret and ConfigMap"
 
 # Check 1: Pod exists
 POD_EXISTS=$(resource_exists "pod/projected-pod" "q62")

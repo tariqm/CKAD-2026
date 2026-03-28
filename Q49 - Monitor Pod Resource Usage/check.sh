@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q55 CHECKS
+# Q49 CHECKS
 # ============================================================================
 score=0
 total=2
 
-print_header "Q55 - Monitor Pod Resource Usage"
+print_header "Q49 - Monitor Pod Resource Usage"
 
 # Check 1: file exists
 if [ -f /root/q49-top.txt ]; then

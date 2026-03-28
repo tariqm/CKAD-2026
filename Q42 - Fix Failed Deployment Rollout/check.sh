@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q46 CHECKS
+# Q42 CHECKS
 # ============================================================================
 score=0
 total=2
 
-print_header "Q46 - Fix Failed Deployment Rollout"
+print_header "Q42 - Fix Failed Deployment Rollout"
 
 # Check 1: Deployment exists
 exists=$(resource_exists "deployment/broken-deploy" "q42")

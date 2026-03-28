@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q57 CHECKS
+# Q51 CHECKS
 # ============================================================================
 score=0
 total=2
 
-print_header "Q57 - Debug Pod with Wrong Command"
+print_header "Q51 - Debug Pod with Wrong Command"
 
 # Check 1: pod exists
 EXISTS=$(resource_exists "pod/wrong-cmd-pod" "q51")

@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q54 CHECKS
+# Q48 CHECKS
 # ============================================================================
 score=0
 total=2
 
-print_header "Q54 - Debug ImagePullBackOff Pod"
+print_header "Q48 - Debug ImagePullBackOff Pod"
 
 # Check 1: pod exists
 EXISTS=$(resource_exists "pod/bad-image-pod" "q48")

@@ -44,12 +44,12 @@ resource_exists() { kubectl get "$1" -n "$2" >/dev/null 2>&1 && echo true || ech
 kget() { kubectl get "$1" -n "$2" -o jsonpath="{$3}" 2>/dev/null; }
 
 # ============================================================================
-# Q79 - Use Downward API Volume
+# Q68 - Use Downward API Volume
 # ============================================================================
 score=0
 total=3
 
-print_header "Q79 - Use Downward API Volume"
+print_header "Q68 - Use Downward API Volume"
 
 # Check 1: Pod exists
 EXISTS=$(resource_exists "pod/downward-vol-pod" "q68")
