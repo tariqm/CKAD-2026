@@ -137,4 +137,4 @@ bash "Q01 - Create Secret from Hardcoded Variables/check.sh"
 
 ## License
 
-MIT
+GNU Public 3.0
