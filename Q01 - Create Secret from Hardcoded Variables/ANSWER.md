@@ -6,13 +6,13 @@
 kubectl create secret generic db-credentials \
   --from-literal=DB_USER=admin \
   --from-literal=DB_PASS=Secret123! \
-  -n default
+  -n q01
 ```
 
 ## Step 2 – Update Deployment to use Secret
 
 ```bash
-kubectl edit deploy api-server -n default
+kubectl edit deploy api-server -n q01
 ```
 
 Replace the hardcoded environment variables:
@@ -34,5 +34,5 @@ env:
 Save and exit. Verify:
 
 ```bash
-kubectl rollout status deploy api-server -n default
+kubectl rollout status deploy api-server -n q01
 ```

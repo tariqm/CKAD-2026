@@ -3,7 +3,7 @@
 ## Step 1 – Edit the Deployment
 
 ```bash
-kubectl edit deploy api-deploy -n default
+kubectl edit deploy api-deploy -n q10
 ```
 
 Add under the container spec:
@@ -20,14 +20,14 @@ readinessProbe:
 ## Step 2 – Verify rollout
 
 ```bash
-kubectl rollout status deploy api-deploy -n default
-kubectl describe deploy api-deploy -n default
+kubectl rollout status deploy api-deploy -n q10
+kubectl describe deploy api-deploy -n q10
 ```
 
 ## Step 3 – Check probe status
 
 ```bash
-kubectl get pods -n default -l app=api-deploy
-kubectl describe pod <pod-name> -n default
+kubectl get pods -n q10 -l app=api-deploy
+kubectl describe pod <pod-name> -n q10
 # Look for Readiness in Conditions section
 ```

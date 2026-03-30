@@ -3,7 +3,7 @@
 ## Step 1 – Edit the Deployment
 
 ```bash
-kubectl edit deploy secure-app -n default
+kubectl edit deploy secure-app -n q11
 ```
 
 Add security context at both levels:
@@ -26,6 +26,6 @@ spec:
 ## Step 2 – Verify
 
 ```bash
-kubectl rollout status deploy secure-app -n default
-kubectl get pod -n default -l app=secure-app -o yaml | grep -A 10 securityContext
+kubectl rollout status deploy secure-app -n q11
+kubectl get pod -n q11 -l app=secure-app -o yaml | grep -A 10 securityContext
 ```

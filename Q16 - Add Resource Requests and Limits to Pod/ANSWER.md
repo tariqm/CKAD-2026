@@ -3,8 +3,8 @@
 ## Step 1 – Check the ResourceQuota
 
 ```bash
-kubectl get quota -n prod
-kubectl describe quota compute-quota -n prod
+kubectl get quota -n q16
+kubectl describe quota compute-quota -n q16
 ```
 
 Shows: `limits.cpu: "2"`, `limits.memory: "4Gi"` → half = `cpu: "1"`, `memory: "2Gi"`
@@ -17,7 +17,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: resource-pod
-  namespace: prod
+  namespace: q16
 spec:
   containers:
     - name: web

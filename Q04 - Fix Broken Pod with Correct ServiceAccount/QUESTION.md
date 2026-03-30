@@ -1,6 +1,6 @@
 # Question 4 – Fix Broken Pod with Correct ServiceAccount
 
-In namespace `monitoring`, Pod `metrics-pod` is using ServiceAccount `wrong-sa` and receiving authorization errors.
+In namespace `q04`, Pod `metrics-pod` is using ServiceAccount `wrong-sa` and receiving authorization errors.
 
 Multiple ServiceAccounts, Roles, and RoleBindings already exist in the namespace:
 

@@ -1,6 +1,6 @@
 # Question 10 – Add Readiness Probe to Deployment
 
-In namespace `default`, Deployment `api-deploy` exists with a container listening on port `8080`.
+In namespace `q10`, Deployment `api-deploy` exists with a container listening on port `8080`.
 
 ## Your Task
 

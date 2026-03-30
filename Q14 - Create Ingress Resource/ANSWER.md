@@ -6,7 +6,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: web-ingress
-  namespace: default
+  namespace: q14
 spec:
   rules:
     - host: web.example.com
@@ -25,6 +25,6 @@ EOF
 ## Verify
 
 ```bash
-kubectl get ingress web-ingress -n default
-kubectl describe ingress web-ingress -n default
+kubectl get ingress web-ingress -n q14
+kubectl describe ingress web-ingress -n q14
 ```

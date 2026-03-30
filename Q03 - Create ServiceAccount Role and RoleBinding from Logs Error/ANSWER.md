@@ -3,7 +3,7 @@
 ## Step 1 – Create ServiceAccount
 
 ```bash
-kubectl create sa log-sa -n audit
+kubectl create sa log-sa -n q03
 ```
 
 ## Step 2 – Create Role
@@ -14,7 +14,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: log-role
-  namespace: audit
+  namespace: q03
 rules:
   - apiGroups: [""]
     resources: ["pods"]
@@ -28,7 +28,7 @@ EOF
 kubectl create rolebinding log-rb \
   --role=log-role \
   --serviceaccount=audit:log-sa \
-  -n audit
+  -n q03
 ```
 
 ## Step 4 – Update Pod to use ServiceAccount
@@ -36,12 +36,12 @@ kubectl create rolebinding log-rb \
 Pods have immutable `serviceAccountName`, so delete and recreate:
 
 ```bash
-kubectl get pod log-collector -n audit -o yaml > /tmp/log-collector.yaml
+kubectl get pod log-collector -n q03 -o yaml > /tmp/log-collector.yaml
 ```
 
 Edit the file to set `spec.serviceAccountName: log-sa` and remove `spec.serviceAccount` if present.
 
 ```bash
-kubectl delete pod log-collector -n audit
+kubectl delete pod log-collector -n q03
 kubectl apply -f /tmp/log-collector.yaml
 ```

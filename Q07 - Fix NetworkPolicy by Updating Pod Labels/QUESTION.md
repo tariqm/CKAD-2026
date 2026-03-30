@@ -1,6 +1,6 @@
 # Question 7 – Fix NetworkPolicy by Updating Pod Labels
 
-In namespace `network-demo`, three Pods exist:
+In namespace `q07`, three Pods exist:
 
 - `frontend` with label `role=wrong-frontend`
 - `backend` with label `role=wrong-backend`

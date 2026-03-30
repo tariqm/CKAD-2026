@@ -6,7 +6,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: api-nodeport
-  namespace: default
+  namespace: q13
 spec:
   type: NodePort
   selector:
@@ -21,6 +21,6 @@ EOF
 ## Verify
 
 ```bash
-kubectl get svc api-nodeport -n default
-kubectl describe svc api-nodeport -n default
+kubectl get svc api-nodeport -n q13
+kubectl describe svc api-nodeport -n q13
 ```

@@ -1,6 +1,6 @@
 # Question 2 – Create CronJob with Schedule and History Limits
 
-Create a CronJob named `backup-job` in namespace `default` with the following specifications:
+Create a CronJob named `backup-job` in namespace `q02` with the following specifications:
 
 - Schedule: Run every 30 minutes (`*/30 * * * *`)
 - Image: `busybox:latest`

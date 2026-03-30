@@ -3,7 +3,7 @@
 ## Step 1 – Scale existing Deployment
 
 ```bash
-kubectl scale deploy web-app --replicas=8 -n default
+kubectl scale deploy web-app --replicas=8 -n q06
 ```
 
 ## Step 2 – Create canary Deployment
@@ -14,7 +14,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: web-app-canary
-  namespace: default
+  namespace: q06
 spec:
   replicas: 2
   selector:
@@ -36,8 +36,8 @@ EOF
 ## Step 3 – Verify
 
 ```bash
-kubectl get endpoints web-service -n default
-kubectl get pods -n default -l app=webapp --show-labels
+kubectl get endpoints web-service -n q06
+kubectl get pods -n q06 -l app=webapp --show-labels
 ```
 
 Both `version=v1` and `version=v2` pods should appear in endpoints.

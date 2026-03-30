@@ -1,6 +1,6 @@
 # Question 9 – Perform Rolling Update and Rollback
 
-In namespace `default`, Deployment `app-v1` exists with image `nginx:1.20`.
+In namespace `q09`, Deployment `app-v1` exists with image `nginx:1.20`.
 
 ## Your Task
 

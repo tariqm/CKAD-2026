@@ -1,6 +1,6 @@
 # Question 14 – Create Ingress Resource
 
-In namespace `default`, the following resources exist:
+In namespace `q14`, the following resources exist:
 
 - Deployment `web-deploy` with Pods labeled `app=web`
 - Service `web-svc` with selector `app=web` on port `8080`

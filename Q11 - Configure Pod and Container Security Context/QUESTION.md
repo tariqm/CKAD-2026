@@ -1,6 +1,6 @@
 # Question 11 – Configure Pod and Container Security Context
 
-In namespace `default`, Deployment `secure-app` exists without any security context.
+In namespace `q11`, Deployment `secure-app` exists without any security context.
 
 ## Your Task
 

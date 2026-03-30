@@ -13,7 +13,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: broken-app
-  namespace: default
+  namespace: q08
 spec:
   replicas: 2
   selector:

@@ -1,6 +1,6 @@
 # Question 13 – Create NodePort Service
 
-In namespace `default`, Deployment `api-server` exists with Pods labeled `app=api` and container port `9090`.
+In namespace `q13`, Deployment `api-server` exists with Pods labeled `app=api` and container port `9090`.
 
 ## Your Task
 

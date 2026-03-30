@@ -3,15 +3,15 @@
 ## Step 1 – Check current state
 
 ```bash
-kubectl get pods -n default --show-labels
-kubectl get svc web-svc -n default -o yaml
-kubectl get endpoints web-svc -n default   # Should be empty
+kubectl get pods -n q12 --show-labels
+kubectl get svc web-svc -n q12 -o yaml
+kubectl get endpoints web-svc -n q12   # Should be empty
 ```
 
 ## Step 2 – Update Service selector
 
 ```bash
-kubectl edit svc web-svc -n default
+kubectl edit svc web-svc -n q12
 ```
 
 Change `app: wrongapp` to `app: webapp`:
@@ -25,6 +25,6 @@ spec:
 ## Step 3 – Verify endpoints
 
 ```bash
-kubectl get endpoints web-svc -n default
+kubectl get endpoints web-svc -n q12
 # Should now show IPs of web-app pods
 ```

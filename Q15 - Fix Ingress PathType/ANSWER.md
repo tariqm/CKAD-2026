@@ -16,7 +16,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: api-ingress
-  namespace: default
+  namespace: q15
 spec:
   rules:
     - http:
@@ -34,5 +34,5 @@ spec:
 
 ```bash
 kubectl apply -f /root/fix-ingress.yaml
-kubectl get ingress api-ingress -n default
+kubectl get ingress api-ingress -n q15
 ```

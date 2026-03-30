@@ -1,6 +1,6 @@
 # Question 6 – Create Canary Deployment with Manual Traffic Split
 
-In namespace `default`, the following resources exist:
+In namespace `q06`, the following resources exist:
 
 - Deployment `web-app` with 5 replicas, labels `app=webapp, version=v1`
 - Service `web-service` with selector `app=webapp`

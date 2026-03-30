@@ -6,7 +6,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: backup-job
-  namespace: default
+  namespace: q02
 spec:
   schedule: "*/30 * * * *"
   successfulJobsHistoryLimit: 3

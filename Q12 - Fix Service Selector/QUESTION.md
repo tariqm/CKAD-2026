@@ -1,6 +1,6 @@
 # Question 12 – Fix Service Selector
 
-In namespace `default`, Deployment `web-app` exists with Pods labeled `app=webapp, tier=frontend`.
+In namespace `q12`, Deployment `web-app` exists with Pods labeled `app=webapp, tier=frontend`.
 
 Service `web-svc` exists but has incorrect selector `app=wrongapp`.
 
